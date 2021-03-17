@@ -1,5 +1,3 @@
-# Project1
-
 # Group Members
 
 Scott S. <br>
