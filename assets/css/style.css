@@ -1,0 +1,18 @@
+* {
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media screen and (max-width: 576px) {
+
+  }
