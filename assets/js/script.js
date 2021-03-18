@@ -1,8 +1,9 @@
 
-let omdbAPI = `http://www.omdbapi.com/?y=2001&apikey=43ca4637&`;
+let omdbAPI = `https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-popular-movies&page=1&year=`;
+const userInput = '1999';
 
 function movieListFetch(){
-    fetch("https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-popular-movies&page=1&year=2020", {
+    fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-popular-movies&page=1&year=${userInput}`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "07375822b7mshfbcf7e4725a7defp1bf4cbjsnd4cef9f733f3",
@@ -15,6 +16,13 @@ function movieListFetch(){
     console.log(response.movie_results[0].title);
     console.log(response.movie_results[1].title);
     console.log(response.movie_results[2].title);
+    console.log(response.movie_results[3].title);
+    console.log(response.movie_results[4].title);
+    console.log(response.movie_results[5].title);
+    console.log(response.movie_results[6].title);
+    console.log(response.movie_results[7].title);
+    console.log(response.movie_results[8].title);
+    console.log(response.movie_results[9].title);
 })
 .catch(err => {
 	console.error(err);
