@@ -6,13 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-
-  <!-- Compressed Foundation CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -20,99 +15,75 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
-    <div class="container">
-      <div class="navbar-brand">Streamline</div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Bookmarks</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Insert year" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Go</button>
-        </form>
-      </div>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">STREAMLINE</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Bookmarks</a></li>
+      </ul>
     </div>
   </nav>
 
+  <div class="row container" id="search">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="search-val" type="number" minlength="4" maxlength="4">
+          <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit</button>
+          <label for="input_text">Insert Year</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
   <main>
-    
-    <h1 class="m-5 " id="headline">Top 10 Trending Movies of [year]</h1>
-    <ul class="list-group mt-3 container">
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 1</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 2</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 3</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 4</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 4</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 6</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 7</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 8</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 9</span>
-      </li>
-      <li class="list-group-item row" aria-current="true">
-        <span class="col">List item 10</span>
-      </li>
-    </ul>
+    <!-- Movie Search Results -->
+    <h1 class="m-3" id="headline"></h1>
+    <div class="hide" id="helpful">Click movie titles for more info</div>
+
+    <section class="hide" id="resulting-movies">
+      <ul class="collapsible container center-align">
+        <li class="hover-color">
+          <div class="collapsible-header" id="title1"></div>
+          <div class="collapsible-body"><span>Insert data from APIs</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header" id="title2"></div>
+          <div class="collapsible-body"><span>Insert data from APIs</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header" id="title3"></div>
+          <div class="collapsible-body"><span>Insert data from APIs</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header" id="title4"></div>
+          <div class="collapsible-body"><span>Insert data from APIs</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header" id="title5"></div>
+          <div class="collapsible-body"><span>Insert data from APIs</span></div>
+        </li>
+      </ul>
+    </section>
+
 
   </main>
 
-  <!-- Trigger/Open The Modal -->
-  <button id="modalBtn" data-open="settings-modal">Click here to see more information</button>
 
-  <!-- The Modal includes responsive formatting-->
-  <div class="reveal tiny small large" id="settings-modal" data-reveal data-animation-in="fade-in"
-    data-animation-out="fade-out">
 
-    <!-- Modal content -->
-    <div class="content-for-modal"></div>
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-  </div>
+
+  <!-- Moment JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- Main JS -->
-  <script src="./assets/js/script.js"></script>
-</body>
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-<!-- Bootstrap CSS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-<!-- Compressed Foundation JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-  integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-
-<script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
