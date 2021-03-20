@@ -5,8 +5,20 @@
 
 body {
     margin: auto;
+    width: 100%;
+}
+
+.content-container {
+    margin: auto;
     width: 80%;
-    
+}
+
+.brand-logo {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem !important;
+    margin-right: 300px !important;
+    display: inline-block;
+    height: 100%;
 }
 
 li:hover {
@@ -14,8 +26,19 @@ li:hover {
     transition: all .2s ease-in-out;
 }
 
-form{
+form {
     width: 30%;
+}
+
+.right {
+    padding-right: 80px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .movie-card {
@@ -59,7 +82,11 @@ form{
 }
 
 @media screen and (max-width: 576px) {
-    #headline {
-        font-size: 1.8rem;
+   /* .nav-wrapper {
+       width: 100%;
+   }; */
+    .brand-logo {
+        font-family: 'Russo One', sans-serif;
+        font-size: 1.8rem !important;
     }
   }

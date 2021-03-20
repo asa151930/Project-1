@@ -2,6 +2,7 @@
 $(document).ready(function () {
   $('.collapsible').collapsible();
   $('.modal').modal();
+  $('.sidenav').sidenav();
 });
 
 let currentYear = moment().format("YYYY");
@@ -23,12 +24,12 @@ $("#submit").click(function (event) {
   console.log(yearSearch);
   console.log(streamingService);
 
-  if (yearSearch === '' || yearSearch > currentYear || yearSearch.length < 4 || streamingService === ("streaming service")) {
+  if (streamingService === ("streaming service")) {
     return;
   }
 
-  $("#headline").text(`Top ${streamingService} Movies Made in ${yearSearch}`);
-
+  $("#headline").text(`Top ${streamingService} Movies`); 
+  
   movieResultsFetch();
 
 })
@@ -53,6 +54,8 @@ function movieResultsFetch() {
       $("#title1").text(`${response.results[0].title}`);
       $("#modal-title-1").text(`${response.results[0].title}`);
       $("#modal-overview-1").text(`${response.results[0].overview}`);
+      let castString = response.results[0].cast.join(", ");
+      console.log(castString);
 
       // Populate info for movie #2
 

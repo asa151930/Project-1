@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
   <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,43 +21,50 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="blue darken-3">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">STREAMLINE</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#" class="brand-logo center">Streamline</a>
+
+
+      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+        <i class="material-icons">menu</i>
+      </a>
+
+      <ul class="right hide-on-med-and-down">
         <li><a href="#">Home</a></li>
         <li><a href="#">Bookmarks</a></li>
       </ul>
     </div>
   </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Bookmarks</a></li>
+  </ul>
 
-  <div class="row container" id="search">
-    <form class="col l12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="search-val" type="number" minlength="4" maxlength="4">
-          <label for="input_text">Insert Year</label>
-
-
-          <select class="browser-default" id="streaming-service">
-            <option value="" disabled selected>Streaming Service</option>
-            <option value="Netflix">Netflix</option>
-            <option value="Hulu">Hulu</option>
-            <option value="3">Prime</option>
-            <option value="3">HBO</option>
-            <option value="3">Starz</option>
-            <option value="3">Showtime</option>
-          </select>
-          <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit</button>
-
-        </div>
-
-      </div>
-    </form>
+  <main class="content-container">
+  <div class="row form-options">
+      <form class="col s12 l2">
+          <div class="row">
+              <div class="input-field">
+                  <select class="browser-default" id="streaming-service">
+                      <option value="" disabled selected>Streaming Service</option>
+                      <option value="Netflix">Netflix</option>
+                      <option value="Hulu">Hulu</option>
+                      <option value="3">Prime</option>
+                      <option value="3">HBO</option>
+                      <option value="3">Starz</option>
+                      <option value="3">Showtime</option>
+                    </select>
+              </div>
+              <div class="input-field">
+                  <button class="btn waves-effect waves-light cyan" id="submit" type="submit" name="action">Go!
+                  </button>
+              </div>
+          </div>
+      </form>
   </div>
-  </div>
 
-  <main>
+  
     <!-- Movie Search Results -->
     <h1 class="m-3" id="headline"></h1>
 
@@ -167,39 +178,39 @@
       </div>
 
       <div class="movie-card col s12 l3 hide">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-4" src="">
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title4">Movie Title</p>
-                </div>
-  
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger" href="#modal4">More Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal3" class="modal">
-                    <div class="modal-content">
-                      <h4 id="modal-title-4"></h4>
-                      <p id="modal-overview-4"></p>
-                      <!-- Add divs for more movie info -->
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-image">
+                <!-- Movie Poster -->
+                <img id="movie-poster-4" src="">
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              </div>
+              <!-- Movie Title (Card) -->
+              <div class="card-content">
+                <p id="title4">Movie Title</p>
+              </div>
+
+              <!-- Modal Start -->
+              <div class="info-modal">
+                <!-- Modal Button -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal4">More Info</a>
+                <!-- Modal Inside -->
+                <div id="modal3" class="modal">
+                  <div class="modal-content">
+                    <h4 id="modal-title-4"></h4>
+                    <p id="modal-overview-4"></p>
+                    <!-- Add divs for more movie info -->
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
     </section>
 
