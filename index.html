@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Streamline</title>
+</head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -42,50 +56,50 @@
   </ul>
 
   <main class="content-container">
-  <div class="row form-options">
+    <div class="row form-options">
       <form class="col s12 l2">
-          <div class="row">
-              <div class="input-field">
-                  <select class="browser-default" id="streaming-service">
-                      <option value="" disabled selected>Streaming Service</option>
-                      <option value="Netflix">Netflix</option>
-                      <option value="Hulu">Hulu</option>
-                      <option value="3">Prime</option>
-                      <option value="3">HBO</option>
-                      <option value="3">Starz</option>
-                      <option value="3">Showtime</option>
-                    </select>
-              </div>
-              <div class="input-field">
-                  <button class="btn waves-effect waves-light cyan" id="submit" type="submit" name="action">Go!
-                  </button>
-              </div>
+        <div class="row">
+          <div class="input-field">
+            <select class="browser-default" id="streaming-service">
+              <option value="" disabled selected>Streaming Service</option>
+              <option value="Netflix">Netflix</option>
+              <option value="Hulu">Hulu</option>
+              <option value="3">Prime</option>
+              <option value="3">HBO</option>
+              <option value="3">Starz</option>
+              <option value="3">Showtime</option>
+            </select>
           </div>
+          <div class="input-field">
+            <button class="btn waves-effect waves-light cyan" id="submit" type="submit" name="action">Go!
+            </button>
+          </div>
+        </div>
       </form>
-  </div>
+    </div>
 
-  
+
     <!-- Movie Search Results -->
     <h1 class="m-3" id="headline"></h1>
 
     <section class="hide row" id="resulting-movies">
 
-      <!-- Movie 1 Card -->
+    <!-- Movie 1 Card -->
 
-      <div class="movie-card col s12 l3">
+    <div class="movie-card col s12 l3">
         <div class="row">
           <div class="col">
             <div class="card">
               <div class="card-image">
                 <!-- Movie Poster -->
-                <img id="movie-poster-1" src="">
+                <img id="movie-poster-1" src="" />
                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
               </div>
               <!-- Movie Title (Card) -->
               <div class="card-content">
                 <p id="title1">Movie Title</p>
               </div>
-
+  
               <!-- Modal Start -->
               <div class="info-modal">
                 <!-- Modal Button -->
@@ -94,8 +108,11 @@
                 <div id="modal1" class="modal">
                   <div class="modal-content">
                     <h4 id="modal-title-1"></h4>
+                    <p id="modal-tagline-1"></p>
+                    <p id="modal-year-1"></p>
                     <p id="modal-overview-1"></p>
-                    <!-- Add divs for more movie info -->
+                    <p id="modal-cast-1"></p>
+                    <p id="modal-genre-1"></p>
                   </div>
                   <div class="modal-footer">
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -107,121 +124,368 @@
         </div>
       </div>
 
-      <div class="movie-card col s12 l3">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-image">
-                <!-- Movie Poster -->
-                <img id="movie-poster-2" src="">
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-              </div>
-              <!-- Movie Title (Card) -->
-              <div class="card-content">
-                <p id="title2">Movie Title</p>
-              </div>
+    <!-- Movie 2 Card -->
 
-              <!-- Modal Start -->
-              <div class="info-modal">
-                <!-- Modal Button -->
-                <a class="waves-effect waves-light btn modal-trigger" href="#modal2">More Info</a>
-                <!-- Modal Inside -->
-                <div id="modal2" class="modal">
-                  <div class="modal-content">
-                    <h4 id="modal-title-2"></h4>
-                    <p id="modal-overview-2"></p>
-                    <!-- Add divs for more movie info -->
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                  </div>
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-2" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title2">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal2">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-2"></h4>
+                  <p id="modal-tagline-2"></p>
+                  <p id="modal-year-2"></p>
+                  <p id="modal-overview-2"></p>
+                  <p id="modal-cast-2"></p>
+                  <p id="modal-genre-2"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="movie-card col s12 l3 hide" id="card3">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-image">
-                <!-- Movie Poster -->
-                <img id="movie-poster-3" src="">
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-              </div>
-              <!-- Movie Title (Card) -->
-              <div class="card-content">
-                <p id="title3">Movie Title</p>
-              </div>
+    <!-- Movie 3 Card -->
 
-              <!-- Modal Start -->
-              <div class="info-modal">
-                <!-- Modal Button -->
-                <a class="waves-effect waves-light btn modal-trigger" href="#modal3">More Info</a>
-                <!-- Modal Inside -->
-                <div id="modal3" class="modal">
-                  <div class="modal-content">
-                    <h4 id="modal-title-3"></h4>
-                    <p id="modal-overview-3"></p>
-                    <!-- Add divs for more movie info -->
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                  </div>
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-3" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title3">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal3">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-3"></h4>
+                  <p id="modal-tagline-3"></p>
+                  <p id="modal-year-3"></p>
+                  <p id="modal-overview-3"></p>
+                  <p id="modal-cast-3"></p>
+                  <p id="modal-genre-3"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="movie-card col s12 l3 hide">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-image">
-                <!-- Movie Poster -->
-                <img id="movie-poster-4" src="">
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-              </div>
-              <!-- Movie Title (Card) -->
-              <div class="card-content">
-                <p id="title4">Movie Title</p>
-              </div>
+    <!-- Movie 4 Card -->
 
-              <!-- Modal Start -->
-              <div class="info-modal">
-                <!-- Modal Button -->
-                <a class="waves-effect waves-light btn modal-trigger" href="#modal4">More Info</a>
-                <!-- Modal Inside -->
-                <div id="modal3" class="modal">
-                  <div class="modal-content">
-                    <h4 id="modal-title-4"></h4>
-                    <p id="modal-overview-4"></p>
-                    <!-- Add divs for more movie info -->
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                  </div>
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-4" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title4">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal4">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal4" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-4"></h4>
+                  <p id="modal-tagline-4"></p>
+                  <p id="modal-year-4"></p>
+                  <p id="modal-overview-4"></p>
+                  <p id="modal-cast-4"></p>
+                  <p id="modal-genre-4"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- Movie 5 Card -->
+
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-5" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title5">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal5">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal5" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-5"></h4>
+                  <p id="modal-tagline-5"></p>
+                  <p id="modal-year-5"></p>
+                  <p id="modal-overview-5"></p>
+                  <p id="modal-cast-5"></p>
+                  <p id="modal-genre-5"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 6 Card -->
+
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-6" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title6">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal6">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal6" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-6"></h4>
+                  <p id="modal-tagline-6"></p>
+                  <p id="modal-year-6"></p>
+                  <p id="modal-overview-6"></p>
+                  <p id="modal-cast-6"></p>
+                  <p id="modal-genre-6"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Movie 7 Card -->
+
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-7" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title7">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal7">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal7" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-7"></h4>
+                  <p id="modal-tagline-7"></p>
+                  <p id="modal-year-7"></p>
+                  <p id="modal-overview-7"></p>
+                  <p id="modal-cast-7"></p>
+                  <p id="modal-genre-7"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 8 Card -->
+
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-8" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title8">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal8">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal8" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-8"></h4>
+                  <p id="modal-tagline-8"></p>
+                  <p id="modal-year-8"></p>
+                  <p id="modal-overview-8"></p>
+                  <p id="modal-cast-8"></p>
+                  <p id="modal-genre-8"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 9 Card -->
+
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-9" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title9">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal9">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal9" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-9"></h4>
+                  <p id="modal-tagline-9"></p>
+                  <p id="modal-year-9"></p>
+                  <p id="modal-overview-9"></p>
+                  <p id="modal-cast-9"></p>
+                  <p id="modal-genre-9"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 10 Card -->
+
+    <div class="movie-card col s12 l3">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-image">
+              <!-- Movie Poster -->
+              <img id="movie-poster-10" src="" />
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <!-- Movie Title (Card) -->
+            <div class="card-content">
+              <p id="title10">Movie Title</p>
+            </div>
+
+            <!-- Modal Start -->
+            <div class="info-modal">
+              <!-- Modal Button -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal10">More Info</a>
+              <!-- Modal Inside -->
+              <div id="modal10" class="modal">
+                <div class="modal-content">
+                  <h4 id="modal-title-10"></h4>
+                  <p id="modal-tagline-10"></p>
+                  <p id="modal-year-10"></p>
+                  <p id="modal-overview-10"></p>
+                  <p id="modal-cast-10"></p>
+                  <p id="modal-genre-10"></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
-
   </main>
-
-
-
-
-
-
-
 
   <!-- Moment JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
