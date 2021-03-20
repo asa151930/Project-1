@@ -1,7 +1,8 @@
 // Accordion script
 $(document).ready(function () {
-  $(".collapsible").collapsible();
-  $(".modal").modal();
+  $('.collapsible').collapsible();
+  $('.modal').modal();
+  $('.sidenav').sidenav();
 });
 
 let currentYear = moment().format("YYYY");
@@ -25,17 +26,12 @@ $("#submit").click(function (event) {
   console.log(yearSearch);
   console.log(streamingService);
 
-  if (
-    yearSearch === "" ||
-    yearSearch > currentYear ||
-    yearSearch.length < 4 ||
-    streamingService === "streaming service"
-  ) {
+  if (streamingService === ("streaming service")) {
     return;
   }
 
-  $("#headline").text(`Top ${streamingService} Movies`);
-
+  $("#headline").text(`Top ${streamingService} Movies`); 
+  
   movieResultsFetch();
 });
 
