@@ -18,11 +18,21 @@ form{
     width: 30%;
 }
 
-#movie-results {
+.movie-card {
+    margin-bottom: 20px;
+}
+
+.modal-trigger {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#resulting-movies {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #search {
@@ -33,7 +43,9 @@ form{
 }
 
 
-
+.grid-color {
+    background-color: blue;
+}
 
 .show {
     display: flex;
@@ -47,5 +59,7 @@ form{
 }
 
 @media screen and (max-width: 576px) {
-
+    #headline {
+        font-size: 1.8rem;
+    }
   }
