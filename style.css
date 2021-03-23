@@ -1,0 +1,197 @@
+* {
+  margin: auto;
+  text-align: center;
+  --headerblue: #1665c0;
+  --light-purple: #8883ac;
+  --dark-purple: #231b41;
+}
+
+.animated-bg {
+  background: linear-gradient(132deg, #6aa2f0, #38db9c, #ad39fb);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 7% 0%;
+  }
+  50% {
+    background-position: 94% 100%;
+  }
+  100% {
+    background-position: 7% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 7% 0%;
+  }
+  50% {
+    background-position: 94% 100%;
+  }
+  100% {
+    background-position: 7% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 7% 0%;
+  }
+  50% {
+    background-position: 94% 100%;
+  }
+  100% {
+    background-position: 7% 0%;
+  }
+}
+
+.static-bg {
+  background: linear-gradient(132deg, #6aa2f0, #38db9c, #ad39fb);
+  background-size: 600% 600%;
+}
+
+/* 
+body {
+  margin: auto;
+  width: 100%;
+  
+} */
+
+nav ul li a,
+nav .brand-logo {
+  color: #1976d2;
+}
+
+.content-container {
+  margin: auto;
+  width: 80%;
+}
+
+.brand-logo {
+  font-family: "Russo One", sans-serif;
+  font-size: 3rem !important;
+  margin-right: 300px !important;
+  display: inline-block;
+}
+
+li:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+form {
+  margin-top: 20px;
+  margin-bottom: -30px;
+}
+
+.right {
+  padding-right: 80px;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.form-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 420px;
+}
+
+.movie-card {
+  margin-bottom: 20px;
+}
+
+.modal-trigger {
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+#resulting-movies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#headline {
+  margin-bottom: 10px;
+}
+
+#subheadline {
+  margin-bottom: 40px;
+}
+
+.grid-color {
+  background-color: blue;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+#modal {
+  box-shadow: 3px 5px 5px #535353;
+}
+.modal-content {
+  background-color: var(--light-purple);
+}
+.title {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 4rem;
+}
+
+.tagline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1.7rem;
+}
+
+.year {
+  font-size: 1.5rem;
+}
+
+.overview {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.cast {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 1741px) {
+  .card {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .brand-logo {
+    font-family: "Russo One", sans-serif;
+    font-size: 1.8rem !important;
+  }
+
+  .card {
+    height: 100%;
+  }
+}
