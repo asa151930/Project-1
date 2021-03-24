@@ -26,31 +26,32 @@
     <title>Streamline</title>
   </head>
   <body class="static-bg">
-    <nav class="white">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Streamline</a>
-        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-          <i class="material-icons blue-text">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
+      <nav class="white">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Streamline</a>
+      
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+              <i class="material-icons blue-text darken-2">menu</i>
+            </a>
+      
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="#">Watch List<span id="plusOne"
+                    class="hide material-icons red-text">plus_one</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
           <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="#"
-              >Watch List<span class="hide material-icons red-text"
-                >plus_one</span
-              ></a
-            >
-          </li>
+          <li><a href="#">Watch List</a></li>
         </ul>
-      </div>
-    </nav>
-    <ul class="sidenav" id="mobile-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Watchlists</a></li>
-    </ul>
     <main class="content-container">
       <h1 class="white-text">Watch List</h1>
-      <ul class="collection" id="stored-titles"></ul>
+      <ul class="" id="stored-titles"></ul>
+      <div class="white-text">Random Chuck Norris Joke:</div>
+      <div class="white-text" id="chuck-norris"></div>
     </main>
     <!-- Moment JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

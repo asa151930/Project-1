@@ -2,6 +2,7 @@ $(document).ready(function () {
   $(".collapsible").collapsible();
   $(".modal").modal();
   $(".sidenav").sidenav();
+  $('.tap-target').tapTarget();
 });
 
 let currentYear = moment().format("YYYY");
@@ -99,49 +100,48 @@ function movieResultsFetch() {
     })
     .then((response) => {
       console.log(response);
+
       $("#resulting-movies").attr("class", "show");
       $("#helpful").attr("class", "show");
 
-      // TRYING TO SPLIT CAST FROM ARRAY
-      var castString = response.results[0].cast.join(", ");
-      console.log(castString);
-
-      for (let i = 0; i < 11; i++) {
+      for (let i = 0; i < 10; i++) {
         let idEnding = i;
-        $(`#movie-poster-${idEnding}`).attr(
-          "src",
-          `${response.results[i].backdropURLs["780"]}`
-        );
+        $(`#movie-poster-${idEnding}`).attr("src",`${response.results[i].backdropURLs["780"]}`);
         $(`#title${idEnding}`).text(`${response.results[i].title}`);
         $(`#modal-title-${idEnding}`).text(`${response.results[i].title}`);
         $(`#modal-tagline-${idEnding}`).text(`${response.results[i].tagline}`);
-        $(`#modal-year-${idEnding}`).text(
-          "Released: " + `${response.results[i].year}`
-        );
-        $(`#modal-overview-${idEnding}`).text(
-          `${response.results[i].overview}`
-        );
-        $(`#modal-cast-${idEnding}`).text(
-          "Cast: " + `${response.results[i].cast.join(", ")}`
-        );
-        $(`#modal-genres-${idEnding}`).text(
-          "Genre: " + `${response.results[i].genres}`
-        );
+        $(`#modal-year-${idEnding}`).text("Released: " + `${response.results[i].year}`);
+        $(`#modal-overview-${idEnding}`).text(`${response.results[i].overview}`);
+        $(`#modal-cast-${idEnding}`).text("Cast: " + `${response.results[i].cast.join(", ")}`);
       }
     })
     .catch((err) => {
       console.error(err);
     });
 }
+
+
+
 // Watchlist Page
-$("i").on("click", function (event) {
+$("i.add").on("click", function (event) {
   event.preventDefault();
   let parent1 = $(this).parent();
   let parent2 = parent1.parent();
   let sibling1 = parent2.siblings(".card-content");
   let showTitle = sibling1.children().text();
   showTitleArr.push(showTitle);
-  console.log(showTitle);
-  console.log(showTitleArr);
+
+  let icon = $(this);
+
   localStorage.setItem("showTitle", JSON.stringify(showTitleArr));
+
+  $("#plusOne").attr("class", "material-icons red-text");
+
+  icon.text("favorite");
+
+  setTimeout (function(){
+      $("#plusOne").attr("class", "hide");
+      icon.text("add");
+  }, 1500)
+
 });
