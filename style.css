@@ -6,6 +6,11 @@
   --dark-purple: #231b41;
 }
 
+body {
+  background-image: url("assets/images/preview-79409-lnfvtQliZJ_0009.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+}
 .animated-bg {
   background: linear-gradient(132deg, #6aa2f0, #38db9c, #ad39fb);
   background-size: 600% 600%;

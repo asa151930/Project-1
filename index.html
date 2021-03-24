@@ -20,39 +20,6 @@
     <title>Streamline</title>
   </head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Streamline</title>
-  </head>
-
   <body class="static-bg">
     <nav class="white">
       <div class="nav-wrapper">
@@ -127,6 +94,58 @@
 
       <section class="hide container" id="resulting-movies">
         <div class="row">
+          <!-- Movie 0 Card -->
+
+          <div class="movie-card col s12 m6 l3">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-image">
+                    <!-- Movie Poster -->
+                    <img id="movie-poster-0" src="" />
+                    <a
+                      class="btn-floating halfway-fab waves-effect waves-light red"
+                      ><i class="material-icons">add</i></a
+                    >
+                  </div>
+                  <!-- Movie Title (Card) -->
+                  <div class="card-content">
+                    <p id="title0">Movie Title</p>
+                  </div>
+
+                  <!-- Modal Start -->
+                  <div class="info-modal">
+                    <!-- Modal Button -->
+                    <a
+                      class="waves-effect waves-light btn modal-trigger deep-purple lighten-3"
+                      href="#modal0"
+                      >More Info</a
+                    >
+                    <!-- Modal Inside -->
+                    <div id="modal0" class="modal">
+                      <div class="modal-content">
+                        <h4 class="title" id="modal-title-0"></h4>
+                        <p class="tagline" id="modal-tagline-0"></p>
+                        <p class="overview" id="modal-overview-0"></p>
+                        <br />
+                        <p class="cast" id="modal-cast-0"></p>
+                        <br />
+                        <p class="year" id="modal-year-0"></p>
+                      </div>
+                      <div class="modal-footer">
+                        <a
+                          href="#!"
+                          class="modal-close waves-effect waves-green btn-flat"
+                          >Close</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Movie 1 Card -->
 
           <div class="movie-card col s12 m6 l3">
@@ -581,58 +600,6 @@
                         <p class="cast" id="modal-cast-9"></p>
                         <br />
                         <p class="year" id="modal-year-9"></p>
-                      </div>
-                      <div class="modal-footer">
-                        <a
-                          href="#!"
-                          class="modal-close waves-effect waves-green btn-flat"
-                          >Close</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Movie 10 Card -->
-
-          <div class="movie-card col s12 m6 l3">
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <div class="card-image">
-                    <!-- Movie Poster -->
-                    <img id="movie-poster-10" src="" />
-                    <a
-                      class="btn-floating halfway-fab waves-effect waves-light red"
-                      ><i class="material-icons">add</i></a
-                    >
-                  </div>
-                  <!-- Movie Title (Card) -->
-                  <div class="card-content">
-                    <p id="title10">Movie Title</p>
-                  </div>
-
-                  <!-- Modal Start -->
-                  <div class="info-modal">
-                    <!-- Modal Button -->
-                    <a
-                      class="waves-effect waves-light btn modal-trigger deep-purple lighten-3"
-                      href="#modal10"
-                      >More Info</a
-                    >
-                    <!-- Modal Inside -->
-                    <div id="modal10" class="modal">
-                      <div class="modal-content">
-                        <h4 class="title" id="modal-title-10"></h4>
-                        <p class="tagline" id="modal-tagline-10"></p>
-                        <p class="overview" id="modal-overview-10"></p>
-                        <br />
-                        <p class="cast" id="modal-cast-10"></p>
-                        <br />
-                        <p class="year" id="modal-year-10"></p>
                       </div>
                       <div class="modal-footer">
                         <a
