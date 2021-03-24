@@ -106,7 +106,7 @@ function movieResultsFetch() {
       var castString = response.results[0].cast.join(", ");
       console.log(castString);
 
-      for (let i = 0; i < 11; i++) {
+      for (let i = 0; i < 10; i++) {
         let idEnding = i;
         $(`#movie-poster-${idEnding}`).attr(
           "src",
@@ -123,9 +123,6 @@ function movieResultsFetch() {
         );
         $(`#modal-cast-${idEnding}`).text(
           "Cast: " + `${response.results[i].cast.join(", ")}`
-        );
-        $(`#modal-genres-${idEnding}`).text(
-          "Genre: " + `${response.results[i].genres}`
         );
       }
     })
