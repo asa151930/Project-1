@@ -18,7 +18,7 @@ As someone looking for something to do, I want to search top movies ever made by
 As a trivia nut, I want to search top movies ever made by any given year and see various details about that movie.
 
 APIs used
-IMDB - rapid api
+Movie of the Night - rapid api
 OTT - rapid api
 
 ACCEPTAINCE CRITERIA
