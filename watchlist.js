@@ -1,3 +1,4 @@
+
 // opens ham
 $(".sidenav").sidenav();
 $('.tap-target').tapTarget();
@@ -38,3 +39,4 @@ displayBookmarks();
 
 // calling display jokes
 jokeDisplay();
+

@@ -71,6 +71,14 @@ nav .brand-logo {
   color: #1976d2;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: hsla(0, 0%, 69%, 0.3);;
+ }
+
 .content-container {
   margin: auto;
   width: 80%;
@@ -83,14 +91,23 @@ nav .brand-logo {
   display: inline-block;
 }
 
-li:hover {
+/* li:hover {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 form {
   margin-top: 20px;
   margin-bottom: -30px;
+}
+
+.btn#submit {
+  background-color: white !important;
+  color: black;
+}
+
+.btn#submit:active {
+  background-color: rgb(245, 176, 0) !important;
 }
 
 .right {
@@ -198,5 +215,13 @@ form {
 
   .card {
     height: 100%;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  #headline {
+    font-size: 2.3rem;
   }
 }
