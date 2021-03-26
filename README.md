@@ -28,5 +28,5 @@ THEN when I click on the movie I am presented with detailed information about th
 WHEN I click the save button
 THEN movies I want to see are saved to "My movies"
 
-#Project Link
+#Project Link <br>
 https://asa151930.github.io/Project-1/
