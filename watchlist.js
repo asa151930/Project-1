@@ -1,5 +1,6 @@
 
 // opens ham
+$("body").attr("class", "animated-bg-watch");
 $(".sidenav").sidenav();
 $('.tap-target').tapTarget();
 let storedTitles = "";
@@ -18,6 +19,8 @@ let storedTitles = "";
     }
   }
   }
+
+  
 
 //  start of jokes 
 function jokeDisplay() {
@@ -45,4 +48,5 @@ displayBookmarks();
 
 // calling display jokes
 jokeDisplay();
+
 
