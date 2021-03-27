@@ -59,6 +59,10 @@ body {
   background-size: 600% 600%;
 }
 
+.animated-bg-watch {
+    background: #6aa2f0;
+}
+
 /* 
 body {
   margin: auto;
@@ -200,43 +204,6 @@ form {
   font-size: 1.5rem;
   text-align: left;
 }
-
-/*  Watch list color animation starts here */
-.animated-bg-watch {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-     background-size: 400% 400%;
-    animation: gradient 25s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
-}
-
-.collection .collection-item {
-  background: white;
-}
-
-.collection-item {
-  color:black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: large;
-  font-style: var(--dark-purple);
-}
-
-
-.white-text  {
-  font-family: 'Times New Roman', Times, serif;
-
-} /* Watch list css ends here */
-
 
 @media screen and (max-width: 1741px) {
   .card {
