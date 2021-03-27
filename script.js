@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 
 let currentYear = moment().format("YYYY");
-let apiKey = "07375822b7mshfbcf7e4725a7defp1bf4cbjsnd4cef9f733f3";
+let apiKey = "";
 let yearSearch = "";
 // const searchVal = $("#search-val");
 let moviesUl = $("#movie-results");
